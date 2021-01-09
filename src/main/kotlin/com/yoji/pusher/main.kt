@@ -16,12 +16,12 @@ fun main(){
     FirebaseApp.initializeApp(options)
 
     val message = Message.builder()
-        .putData("action", "LIKE")
+        .putData("action", "NEW_POST")
         .putData("content", """{
-          "userId": 1,
-          "userName": "Vasiliy",
+          "postAuthor": "Netology",
+          "postAuthorId": 1,
           "postId": 2,
-          "postAuthor": "Netology"
+          "postContent": "Поговорим о важнейшей детали экшена Майкла Бэя, которую никто не видит. Буквально. Ведь это пауза в монтаже звука. А тесная работа с саунддизайнерами навсегда изменила подход Бэя к режиссуре и финальной сборке его фильмов. Что стало для режиссёра как благословением, так и проклятием."
         }""".trimIndent())
         .setToken(token)
         .build()
